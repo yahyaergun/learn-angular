@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'favorite';
+  title = 'this is a long text which has one of the most distributed title case ever.';
 }
