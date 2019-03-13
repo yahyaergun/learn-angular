@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -12,6 +13,8 @@ import { CourseFormComponent } from './course-form/course-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 import { ChangePasswordFormComponent } from './change-password-form/change-password-form.component';
+import { PostsComponent } from './posts/posts.component';
+import { PostService } from './services/post.service';
 
 @NgModule({
   declarations: [
@@ -24,14 +27,18 @@ import { ChangePasswordFormComponent } from './change-password-form/change-passw
     CourseFormComponent,
     SignupFormComponent,
     NewCourseFormComponent,
-    ChangePasswordFormComponent
+    ChangePasswordFormComponent,
+    PostsComponent
   ],
   imports: [
     FormsModule,
     ReactiveFormsModule,
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    PostService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
